@@ -12,7 +12,8 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem 'simple_form'
 gem 'mongoid_fulltext'
 gem 'devise'
-
+gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
 
 
 # Gems used only for assets and not required
