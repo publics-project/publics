@@ -1,0 +1,9 @@
+<%= form_for [:profile, @message] do |f| %>
+  <%= f.label :subject %>
+  <%= f.text_field :subject %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <%= f.label :receiver %>
+  <%= f.select :receiver_id, receiver_options, prompt: 'Choose' %>
+  <%= f.submit %>
+<% end %>

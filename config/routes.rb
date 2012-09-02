@@ -2,8 +2,8 @@ Publics::Application.routes.draw do
   devise_for :users
 
   resource :profile, controller: 'users', only: [:show] do
-    resources :messages, except: [:edit, :update, :destroy, :index] do
-      get ':scope', :action => :index, :on => :collection, constraints: { scope: /(sent|received)/ }
+    resources :messages, only: [:show, :new, :create] do
+      get ':scope', :action => :index, :on => :collection, constraints: { scope: /(sent|received)/ }, :as => :index
     end
   end
 

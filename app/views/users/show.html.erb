@@ -1,5 +1,6 @@
 <div class="profile">
   <p>Email: <%= @user.email %></p>
-  <p>Sent messages: <%= render @user.sent_messages %></p>
-  <p>Received messages: <%= render @user.sent_messages %></p>
+  <p><%= link_to "Sent messages", index_profile_messages_path('sent') %></p>
+  <p><%= link_to "Received messages", index_profile_messages_path('received') %></p>
+  <p><%= link_to "New message", new_profile_message_path %></p>
 </div>
