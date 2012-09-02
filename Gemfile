@@ -5,7 +5,14 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mongoid', "~> 2.4"
+gem 'slim'
+gem "bson_ext"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'simple_form'
+gem 'mongoid_fulltext'
+gem 'devise'
+
 
 
 # Gems used only for assets and not required
@@ -21,6 +28,16 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test, :development do
+  gem 'capybara'
+  gem "rspec-rails"
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'rb-fsevent'
+  gem 'database_cleaner'
+  gem 'debugger'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

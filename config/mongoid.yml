@@ -1,0 +1,8 @@
+development:
+  database: publics_development
+  hosts: localhost
+test:
+  database: publics_test
+  hosts: localhost
+production:
+  uri: <%= ENV['MONGOLAB_URI'] %>
